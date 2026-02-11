@@ -1,0 +1,59 @@
+habit-tracker/
+│
+├── index.php
+├── config/
+│   ├── database.php
+│   ├── mailer.php
+│   └── sms.php
+│
+├── assets/
+│   ├── css/
+│   │   ├── style.css
+│   │   └── dark-mode.css
+│   ├── js/
+│   │   └── main.js
+│   └── images/
+│       └── uploads/
+│
+├── includes/
+│   ├── header.php
+│   ├── footer.php
+│   ├── sidebar.php
+│   └── auth-check.php
+│
+├── controllers/
+│   ├── AuthController.php
+│   ├── UserController.php
+│   ├── HabitController.php
+│   └── AdminController.php
+│
+├── models/
+│   ├── User.php
+│   ├── Habit.php
+│   ├── Calorie.php
+│   └── Notification.php
+│
+├── views/
+│   ├── auth/
+│   │   ├── login.php
+│   │   ├── register.php
+│   │   └── forgot-password.php
+│   │
+│   ├── user/
+│   │   ├── dashboard.php
+│   │   ├── habits.php
+│   │   ├── calorie-tracker.php
+│   │   ├── profile.php
+│   │   └── reports.php
+│   │
+│   └── admin/
+│       ├── dashboard.php
+│       ├── users.php
+│       └── settings.php
+│
+├── lib/
+│   ├── PHPMailer/
+│   └── SMS/
+│
+└── database/
+    └── habit_tracker.sql cmd te commad diye ata kibabe create korbo create korar cmd commad dew in aksate

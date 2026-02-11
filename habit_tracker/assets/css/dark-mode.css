@@ -1,0 +1,236 @@
+/* dark-mode.css */
+
+/* Dark Mode Variables */
+:root {
+    --dark-bg-primary: #121212;
+    --dark-bg-secondary: #1e1e1e;
+    --dark-bg-tertiary: #2d2d2d;
+    --dark-text-primary: #e0e0e0;
+    --dark-text-secondary: #a0a0a0;
+    --dark-border: #404040;
+    --dark-accent: #4dabf7;
+    --dark-accent-hover: #339af0;
+    --dark-success: #40c057;
+    --dark-warning: #f59f00;
+    --dark-danger: #fa5252;
+    --dark-shadow: rgba(0, 0, 0, 0.5);
+}
+
+/* Dark Mode Classes */
+.dark-mode {
+    background-color: var(--dark-bg-primary);
+    color: var(--dark-text-primary);
+    transition: all 0.3s ease;
+}
+
+.dark-mode .card,
+.dark-mode .modal-content,
+.dark-mode .dropdown-menu {
+    background-color: var(--dark-bg-secondary);
+    border-color: var(--dark-border);
+    color: var(--dark-text-primary);
+}
+
+.dark-mode .form-control,
+.dark-mode .form-select {
+    background-color: var(--dark-bg-tertiary);
+    border-color: var(--dark-border);
+    color: var(--dark-text-primary);
+}
+
+.dark-mode .form-control:focus,
+.dark-mode .form-select:focus {
+    background-color: var(--dark-bg-tertiary);
+    border-color: var(--dark-accent);
+    color: var(--dark-text-primary);
+}
+
+.dark-mode .table {
+    color: var(--dark-text-primary);
+}
+
+.dark-mode .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: var(--dark-bg-tertiary);
+}
+
+.dark-mode .table-bordered {
+    border-color: var(--dark-border);
+}
+
+.dark-mode .table-bordered th,
+.dark-mode .table-bordered td {
+    border-color: var(--dark-border);
+}
+
+.dark-mode .btn-primary {
+    background-color: var(--dark-accent);
+    border-color: var(--dark-accent);
+}
+
+.dark-mode .btn-primary:hover {
+    background-color: var(--dark-accent-hover);
+    border-color: var(--dark-accent-hover);
+}
+
+.dark-mode .btn-outline-primary {
+    color: var(--dark-accent);
+    border-color: var(--dark-accent);
+}
+
+.dark-mode .btn-outline-primary:hover {
+    background-color: var(--dark-accent);
+    border-color: var(--dark-accent);
+}
+
+.dark-mode .navbar,
+.dark-mode .footer {
+    background-color: var(--dark-bg-secondary) !important;
+    border-color: var(--dark-border);
+}
+
+.dark-mode .sidebar {
+    background-color: var(--dark-bg-secondary);
+    border-right: 1px solid var(--dark-border);
+}
+
+.dark-mode .nav-link {
+    color: var(--dark-text-secondary);
+}
+
+.dark-mode .nav-link:hover,
+.dark-mode .nav-link.active {
+    color: var(--dark-accent);
+}
+
+.dark-mode .text-muted {
+    color: var(--dark-text-secondary) !important;
+}
+
+.dark-mode .progress {
+    background-color: var(--dark-bg-tertiary);
+}
+
+.dark-mode .badge {
+    color: var(--dark-text-primary);
+}
+
+.dark-mode .alert {
+    background-color: var(--dark-bg-tertiary);
+    border-color: var(--dark-border);
+    color: var(--dark-text-primary);
+}
+
+.dark-mode .list-group-item {
+    background-color: var(--dark-bg-secondary);
+    border-color: var(--dark-border);
+    color: var(--dark-text-primary);
+}
+
+.dark-mode .list-group-item-action:hover {
+    background-color: var(--dark-bg-tertiary);
+}
+
+.dark-mode .border {
+    border-color: var(--dark-border) !important;
+}
+
+.dark-mode .text-dark {
+    color: var(--dark-text-primary) !important;
+}
+
+.dark-mode .bg-light {
+    background-color: var(--dark-bg-secondary) !important;
+}
+
+.dark-mode .bg-white {
+    background-color: var(--dark-bg-secondary) !important;
+}
+
+/* Custom Dark Mode Toggle Switch */
+.dark-mode-toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.dark-mode-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.dark-mode-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.dark-mode-slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .dark-mode-slider {
+    background-color: var(--dark-accent);
+}
+
+input:checked + .dark-mode-slider:before {
+    transform: translateX(30px);
+}
+
+/* Chart Styling for Dark Mode */
+.dark-mode .chart-container {
+    background-color: var(--dark-bg-secondary);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+/* Calendar Dark Mode */
+.dark-mode .fc {
+    color: var(--dark-text-primary);
+}
+
+.dark-mode .fc-toolbar,
+.dark-mode .fc-view {
+    background-color: var(--dark-bg-secondary);
+}
+
+.dark-mode .fc-daygrid-day,
+.dark-mode .fc-timegrid-slot {
+    background-color: var(--dark-bg-secondary);
+    border-color: var(--dark-border);
+}
+
+/* Dashboard Specific Dark Mode */
+.dark-mode .stat-card {
+    background-color: var(--dark-bg-tertiary);
+    border-left: 4px solid var(--dark-accent);
+}
+
+.dark-mode .habit-item {
+    background-color: var(--dark-bg-tertiary);
+    border-color: var(--dark-border);
+}
+
+.dark-mode .habit-item.completed {
+    border-left-color: var(--dark-success);
+}
+
+.dark-mode .streak-counter {
+    background: linear-gradient(135deg, var(--dark-bg-tertiary), var(--dark-bg-secondary));
+    border-color: var(--dark-border);
+}
